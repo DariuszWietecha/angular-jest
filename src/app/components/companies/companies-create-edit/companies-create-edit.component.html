@@ -1,0 +1,49 @@
+<h5><span class="text-capitalize">{{ type }}</span> company</h5>
+
+<form [formGroup]="createEditForm" (ngSubmit)="onSubmit()">
+  <div>
+    <dt>
+      <label for="name">
+        Name
+      </label>
+    </dt>
+    <dd>
+      <input id="name" type="text" formControlName="name">
+    </dd>
+  </div>
+  <div>
+    <dt>
+      <label for="logo-url">
+        LogoUrl
+      </label>
+    </dt>
+    <dd>
+      <input id="logo-url" type="text" formControlName="logoUrl">
+    </dd>
+  </div>
+  <div>
+    <dt>
+      <label for="e-mail">
+        E-mail
+      </label>
+    </dt>
+    <dd>
+      <input id="e-mail" type="text" formControlName="email">
+    </dd>
+  </div>
+  <div>
+    <dt>
+      <label for="categories">
+        Categories
+      </label>
+    </dt>
+    <dd>
+      <select id="categories" multiple formControlName="categories">
+      <option *ngFor="let category of categories" [value]="category.id">
+        {{category.name}}</option>
+    </select>
+  </dd>
+  </div>
+
+  <button class="button" type="submit" class="btn btn-primary">Save</button>
+</form>

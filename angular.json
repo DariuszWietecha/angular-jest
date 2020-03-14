@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-jest-sample": {
+    "angular-crud": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-jest-sample",
+            "outputPath": "dist/angular-crud",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+            ]
           },
           "configurations": {
             "production": {
@@ -62,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-jest-sample:build"
+            "browserTarget": "angular-crud:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-jest-sample:build:production"
+              "browserTarget": "angular-crud:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-jest-sample:build"
+            "browserTarget": "angular-crud:build"
           }
         },
         "lint": {
@@ -93,15 +97,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-jest-sample:serve"
+            "devServerTarget": "angular-crud:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-jest-sample:serve:production"
+              "devServerTarget": "angular-crud:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "angular-jest-sample"
+    }
+  },
+  "defaultProject": "angular-crud"
 }

@@ -1,11 +1,11 @@
 {
-  "name": "angular-jest-sample",
+  "name": "angular-crud",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build",
-    "postinstall": "ng build --output-path dist",
+    "build": "ng build --output-path dist",
+    "postinstall": "ng build",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "ng lint"
@@ -40,7 +40,9 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "bootstrap": "^4.4.1",
     "express": "^4.17.1",
+    "jquery": "^3.4.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
