@@ -1,9 +1,14 @@
+import { CategoriesService } from './categories.service';
+import { HttpClientModule } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
 
-import { CategoriesService } from './categories.service';
-
 describe('CategoriesService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(() => TestBed.configureTestingModule({
+    imports: [
+      HttpClientModule,
+    ],
+    providers: [CategoriesService],
+  }));
 
   it('should be created', () => {
     const service: CategoriesService = TestBed.get(CategoriesService);

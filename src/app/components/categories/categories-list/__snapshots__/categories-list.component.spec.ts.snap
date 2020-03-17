@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoriesListComponent snapShot 1`] = `
+<app-categories-list
+  categories={[Function Array]}
+  categoriesService={[Function CategoriesService]}
+>
+  <div
+    class="text-right"
+  >
+    <a
+      class="btn btn-primary"
+      href="/categories/create"
+      ng-reflect-router-link="/categories/create/"
+    >
+      Create
+    </a>
+  </div><h2>
+    Categories
+  </h2><div
+    class="d-flex flex-wrap"
+  >
+    
+    <div
+      class="card col-4"
+    >
+      <div
+        class="card-body"
+      >
+        <h4
+          class="card-title"
+        >
+          Big Category
+        </h4>
+        <a
+          class="btn btn-primary"
+          href="/categories/edit/a0308830-660b-11ea-9266-adf5decb4537"
+          ng-reflect-router-link="/categories/edit,a0308830-660b"
+        >
+          Edit
+        </a>
+      </div>
+    </div>
+    <div
+      class="card col-4"
+    >
+      <div
+        class="card-body"
+      >
+        <h4
+          class="card-title"
+        >
+          Small Category
+        </h4>
+        <a
+          class="btn btn-primary"
+          href="/categories/edit/eae597d0-660b-11ea-9266-adf5decb4537"
+          ng-reflect-router-link="/categories/edit,eae597d0-660b"
+        >
+          Edit
+        </a>
+      </div>
+    </div>
+  </div>
+</app-categories-list>
+`;

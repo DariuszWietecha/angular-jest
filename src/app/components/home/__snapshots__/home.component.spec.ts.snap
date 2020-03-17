@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeComponent snapShot 1`] = `
+<app-home
+  categoryId="null"
+  route={[Function ActivatedRoute]}
+  viewsService={[Function ViewsService]}
+>
+  <div
+    class="row"
+  >
+    <div
+      class="col-3"
+    >
+      <h4>
+        Categories
+      </h4>
+      <ul
+        class="list-group"
+      >
+        <a
+          class="list-group-item list-group-item-action active"
+          href="/"
+          ng-reflect-klass="list-group-item list-group-ite"
+          ng-reflect-ng-class="[object Object]"
+          ng-reflect-router-link=""
+        >
+          All
+        </a>
+        
+      </ul>
+    </div>
+    <div
+      class="col-9"
+    >
+      <h4>
+        Companies
+      </h4>
+      <div
+        class="d-flex flex-wrap"
+      >
+        
+      </div>
+    </div>
+  </div>
+</app-home>
+`;

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { HomeComponent } from './components/home/home.component';
 import { CategoriesListComponent } from './components/categories/categories-list/categories-list.component';
 import { CategoriesCreateEditComponent } from './components/categories/categories-create-edit/categories-create-edit.component';
@@ -9,7 +8,8 @@ import { CompaniesCreateEditComponent } from './components/companies/companies-c
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'views/:categoryId', component: HomeComponent },
   { path: 'categories', component: CategoriesListComponent },
   { path: 'categories/:type', component: CategoriesCreateEditComponent },
@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'companies', component: CompaniesListComponent },
   { path: 'companies/:type', component: CompaniesCreateEditComponent },
   { path: 'companies/:type/:id', component: CompaniesCreateEditComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({

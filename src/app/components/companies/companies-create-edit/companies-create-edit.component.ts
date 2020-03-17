@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { CategoriesService, ICategory } from '../../../services/categories.service';
+import { CategoriesService } from '../../../services/categories.service';
 import { CompaniesService } from '../../../services/companies.service';
 import { Router } from '@angular/router';
 
@@ -14,6 +14,8 @@ export class CompaniesCreateEditComponent implements OnInit {
   categories = [];
   createEditForm: FormGroup;
   type: string;
+  isCategorySelected = (categoryId) => this.createEditForm.value.categories &&
+  this.createEditForm.value.categories.some((category) =>  category.id === categoryId)
 
   constructor(
     private route: ActivatedRoute,
@@ -59,7 +61,7 @@ export class CompaniesCreateEditComponent implements OnInit {
 
     this.companiesService[method](formData)
       .subscribe(() => {
-        this.router.navigate(['']);
+        this.router.navigate(['/companies']);
       });
 
     this.createEditForm.reset();

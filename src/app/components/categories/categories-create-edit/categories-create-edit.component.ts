@@ -47,9 +47,9 @@ export class CategoriesCreateEditComponent implements OnInit {
 
     this.categoriesService[method](formData)
       .subscribe(() => {
-        this.router.navigate(['']);
+        this.router.navigate(['/categories']);
       });
-
+// TODO: associating company with category
     this.createEditForm.reset();
   }
 }

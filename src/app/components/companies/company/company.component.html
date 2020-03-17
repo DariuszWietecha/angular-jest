@@ -1,0 +1,21 @@
+<div class="card-body">
+  <h4 class="card-title">{{ company.name }}</h4>
+
+  <dt>Name:</dt>
+  <dd>{{ company.name }}</dd>
+
+  <dt>Logo:</dt>
+  <dd>{{ company.logoUrl }}</dd>
+
+  <dt>E-mail:</dt>
+  <dd>{{ company.email }}</dd>
+
+  <dt>Categories:</dt>
+  <dd>
+    <ul>
+      <li *ngFor="let category of company.categories">{{category.name}}</li>
+    </ul>
+  </dd>
+
+  <a [routerLink]="['/companies/edit', company.id]" class="btn btn-primary"  *ngIf="showEditButton === true">Edit</a>
+</div>

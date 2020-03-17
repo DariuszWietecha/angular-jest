@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompanyComponent snapShot 1`] = `
+<app-company
+  className={[Function String]}
+  company={[Function Object]}
+  showEditButton={[Function Boolean]}
+>
+  <div
+    class="card-body"
+  >
+    <h4
+      class="card-title"
+    >
+      Great Company
+    </h4>
+    <dt>
+      Name:
+    </dt>
+    <dd>
+      Great Company
+    </dd>
+    <dt>
+      Logo:
+    </dt>
+    <dd>
+      Great cube
+    </dd>
+    <dt>
+      E-mail:
+    </dt>
+    <dd>
+      mail@greatcompany.com
+    </dd>
+    <dt>
+      Categories:
+    </dt>
+    <dd>
+      <ul>
+        
+        <li>
+          Big Category
+        </li>
+      </ul>
+    </dd>
+    
+    <a
+      class="btn btn-primary"
+      href="/companies/edit/f0a6d4b0-6591-11ea-a253-fd7829c2ab13"
+      ng-reflect-router-link="/companies/edit,f0a6d4b0-6591-"
+    >
+      Edit
+    </a>
+  </div>
+</app-company>
+`;

@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompaniesListComponent snapShot 1`] = `
+<app-companies-list
+  companies={[Function Array]}
+  companiesService={[Function CompaniesService]}
+>
+  <div
+    class="text-right"
+  >
+    <a
+      class="btn btn-primary"
+      href="/companies/create"
+      ng-reflect-router-link="/companies/create/"
+    >
+      Create
+    </a>
+  </div><h4>
+    Companies
+  </h4><div
+    class="d-flex flex-wrap"
+  >
+    
+    <app-company
+      class="card col-4"
+      ng-reflect-company="[object Object]"
+    >
+      <div
+        class="card-body"
+      >
+        <h4
+          class="card-title"
+        >
+          Great Company
+        </h4>
+        <dt>
+          Name:
+        </dt>
+        <dd>
+          Great Company
+        </dd>
+        <dt>
+          Logo:
+        </dt>
+        <dd>
+          Great cube
+        </dd>
+        <dt>
+          E-mail:
+        </dt>
+        <dd>
+          mail@greatcompany.com
+        </dd>
+        <dt>
+          Categories:
+        </dt>
+        <dd>
+          <ul>
+            
+            <li>
+              Big Category
+            </li>
+          </ul>
+        </dd>
+        
+        <a
+          class="btn btn-primary"
+          href="/companies/edit/f0a6d4b0-6591-11ea-a253-fd7829c2ab13"
+          ng-reflect-router-link="/companies/edit,f0a6d4b0-6591-"
+        >
+          Edit
+        </a>
+      </div>
+    </app-company>
+    <app-company
+      class="card col-4"
+      ng-reflect-company="[object Object]"
+    >
+      <div
+        class="card-body"
+      >
+        <h4
+          class="card-title"
+        >
+          Small Company
+        </h4>
+        <dt>
+          Name:
+        </dt>
+        <dd>
+          Small Company
+        </dd>
+        <dt>
+          Logo:
+        </dt>
+        <dd>
+          Small ball
+        </dd>
+        <dt>
+          E-mail:
+        </dt>
+        <dd>
+          mail@smallcompany.com
+        </dd>
+        <dt>
+          Categories:
+        </dt>
+        <dd>
+          <ul>
+            
+            <li>
+              Quite big company
+            </li>
+          </ul>
+        </dd>
+        
+        <a
+          class="btn btn-primary"
+          href="/companies/edit/f0a6d4b0-6591-11ea-a253-fd7829c2aaaa"
+          ng-reflect-router-link="/companies/edit,f0a6d4b0-6591-"
+        >
+          Edit
+        </a>
+      </div>
+    </app-company>
+  </div>
+</app-companies-list>
+`;

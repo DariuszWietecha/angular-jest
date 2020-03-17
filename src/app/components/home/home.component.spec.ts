@@ -1,6 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CompanyComponent } from '../companies/company/company.component';
 import { HomeComponent } from './home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ViewsService } from '../../services/views.service';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -8,7 +11,9 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      imports: [HttpClientModule, RouterTestingModule],
+      declarations: [ CompanyComponent, HomeComponent ],
+      providers: [ViewsService],
     })
     .compileComponents();
   }));
@@ -21,5 +26,9 @@ describe('HomeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('snapShot', () => {
+    expect(fixture).toMatchSnapshot();
   });
 });

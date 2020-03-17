@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoriesCreateEditComponent snapShot 1`] = `
+<app-categories-create-edit
+  categoriesService={[Function CategoriesService]}
+  createEditForm={[Function FormGroup]}
+  formBuilder={[Function FormBuilder]}
+  route={[Function ActivatedRoute]}
+  router={[Function Router]}
+  type="null"
+>
+  <h4>
+    <span
+      class="text-capitalize"
+    >
+      
+    </span>
+     category
+  </h4><form
+    class="ng-untouched ng-pristine ng-valid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    <div>
+      <dt>
+        <label
+          for="name"
+        >
+           Name: 
+        </label>
+      </dt>
+      <dd>
+        <input
+          class="ng-untouched ng-pristine ng-valid"
+          formcontrolname="name"
+          id="name"
+          ng-reflect-name="name"
+          type="text"
+        />
+      </dd>
+    </div>
+    <button
+      class="btn btn-primary"
+      type="submit"
+    >
+      Save
+    </button>
+  </form>
+</app-categories-create-edit>
+`;

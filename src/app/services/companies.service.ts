@@ -17,21 +17,21 @@ export interface ICompany extends ICompanyInput {
 export class CompaniesService {
 
   constructor(private http: HttpClient) { }
-  baseUrl = 'https://express-rest-api-100.herokuapp.com/companies/';
+  endpoint = 'companies/';
 
   get(id: string): Observable<ICompany> {
-    return this.http.get<ICompany>(this.baseUrl + id);
+    return this.http.get<ICompany>(this.endpoint + id);
   }
 
   list(): Observable<ICompany[]> {
-    return this.http.get<ICompany[]>(this.baseUrl);
+    return this.http.get<ICompany[]>(this.endpoint);
   }
 
   create(company: ICompany): Observable<ICompany> {
-    return this.http.post<ICompany>(this.baseUrl, company);
+    return this.http.post<ICompany>(this.endpoint, company);
   }
 
   edit(company: ICompany): Observable<ICompany> {
-    return this.http.put<ICompany>(this.baseUrl, company);
+    return this.http.put<ICompany>(this.endpoint, company);
   }
 }

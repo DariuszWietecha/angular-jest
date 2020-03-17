@@ -14,10 +14,10 @@ interface IViewsResponse {
 export class ViewsService {
 
   constructor(private http: HttpClient) { }
-  baseUrl = 'https://express-rest-api-100.herokuapp.com/views';
+  endpoint = 'views';
 
   get(categoryId?: string): Observable<IViewsResponse> {
-    const url = this.baseUrl + (categoryId ? ('?categoryId=' + categoryId) : '');
+    const url = this.endpoint + (categoryId ? ('?categoryId=' + categoryId) : '');
     return this.http.get<IViewsResponse>(url);
   }
 }

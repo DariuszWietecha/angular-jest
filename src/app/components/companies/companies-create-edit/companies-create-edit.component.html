@@ -1,4 +1,4 @@
-<h5><span class="text-capitalize">{{ type }}</span> company</h5>
+<h4><span class="text-capitalize">{{ type }}</span> company</h4>
 
 <form [formGroup]="createEditForm" (ngSubmit)="onSubmit()">
   <div>
@@ -39,9 +39,12 @@
     </dt>
     <dd>
       <select id="categories" multiple formControlName="categories">
-      <option *ngFor="let category of categories" [value]="category.id">
+      <option *ngFor="let category of categories"
+      [ngValue]="category"
+      [selected]="isCategorySelected(category.id)">
         {{category.name}}</option>
     </select>
+    <div><small>Use Ctrl + left mouse button to select multiple items or unselect all.</small></div>
   </dd>
   </div>
 

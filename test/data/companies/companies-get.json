@@ -1,0 +1,26 @@
+[
+  {
+    "id": "f0a6d4b0-6591-11ea-a253-fd7829c2ab13",
+    "name": "Great Company",
+    "logoUrl": "Great cube",
+    "email": "mail@greatcompany.com",
+    "categories": [
+      {
+        "id": "a0308830-660b-11ea-9266-adf5decb4537",
+        "name": "Big Category"
+      }
+    ]
+  },
+  {
+    "id": "f0a6d4b0-6591-11ea-a253-fd7829c2aaaa",
+    "name": "Small Company",
+    "logoUrl": "Small ball",
+    "email": "mail@smallcompany.com",
+    "categories": [
+      {
+        "id": "476dc010-66ff-11ea-8a34-7b3b618d202e",
+        "name": "Quite big company"
+      }
+    ]
+  }
+]

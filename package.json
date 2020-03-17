@@ -1,16 +1,23 @@
 {
-  "name": "angular-crud",
-  "version": "0.0.0",
+  "name": "angular-jest",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build --output-path dist",
     "postinstall": "ng build",
+    "serve": "ng serve",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "ng lint"
   },
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:DariuszWietecha/angular-crud.git"
+  },
+  "author": "Dariusz Wietecha",
+  "license": "ISC",
   "jest": {
     "preset": "jest-preset-angular",
     "setupFilesAfterEnv": [

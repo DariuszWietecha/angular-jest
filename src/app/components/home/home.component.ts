@@ -29,8 +29,5 @@ export class HomeComponent implements OnInit {
           this.categoryId = data.categoryId;
         });
     });
-
-
   }
-
 }

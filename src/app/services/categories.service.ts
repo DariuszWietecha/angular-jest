@@ -14,21 +14,21 @@ export interface ICategory extends ICategoryInput {
 export class CategoriesService {
 
   constructor(private http: HttpClient) { }
-  baseUrl = 'https://express-rest-api-100.herokuapp.com/categories/';
+  endpoint = 'categories/';
 
   get(id: string): Observable<ICategory> {
-    return this.http.get<ICategory>(this.baseUrl + id);
+    return this.http.get<ICategory>(this.endpoint + id);
   }
 
   list(): Observable<ICategory[]> {
-    return this.http.get<ICategory[]>(this.baseUrl);
+    return this.http.get<ICategory[]>(this.endpoint);
   }
 
   create(company: ICategory): Observable<ICategory> {
-    return this.http.post<ICategory>(this.baseUrl, company);
+    return this.http.post<ICategory>(this.endpoint, company);
   }
 
   edit(company: ICategory): Observable<ICategory> {
-    return this.http.put<ICategory>(this.baseUrl, company);
+    return this.http.put<ICategory>(this.endpoint, company);
   }
 }

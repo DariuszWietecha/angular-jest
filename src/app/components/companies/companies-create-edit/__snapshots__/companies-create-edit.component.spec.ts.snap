@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompaniesCreateEditComponent snapShot 1`] = `
+<app-companies-create-edit
+  categories={[Function Array]}
+  categoriesService={[Function CategoriesService]}
+  companiesService={[Function CompaniesService]}
+  createEditForm={[Function FormGroup]}
+  formBuilder={[Function FormBuilder]}
+  isCategorySelected={[Function Function]}
+  route={[Function ActivatedRoute]}
+  router={[Function Router]}
+  type="null"
+>
+  <h4>
+    <span
+      class="text-capitalize"
+    >
+      
+    </span>
+     company
+  </h4><form
+    class="ng-untouched ng-pristine ng-valid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    <div>
+      <dt>
+        <label
+          for="name"
+        >
+           Name 
+        </label>
+      </dt>
+      <dd>
+        <input
+          class="ng-untouched ng-pristine ng-valid"
+          formcontrolname="name"
+          id="name"
+          ng-reflect-name="name"
+          type="text"
+        />
+      </dd>
+    </div>
+    <div>
+      <dt>
+        <label
+          for="logo-url"
+        >
+           LogoUrl 
+        </label>
+      </dt>
+      <dd>
+        <input
+          class="ng-untouched ng-pristine ng-valid"
+          formcontrolname="logoUrl"
+          id="logo-url"
+          ng-reflect-name="logoUrl"
+          type="text"
+        />
+      </dd>
+    </div>
+    <div>
+      <dt>
+        <label
+          for="e-mail"
+        >
+           E-mail 
+        </label>
+      </dt>
+      <dd>
+        <input
+          class="ng-untouched ng-pristine ng-valid"
+          formcontrolname="email"
+          id="e-mail"
+          ng-reflect-name="email"
+          type="text"
+        />
+      </dd>
+    </div>
+    <div>
+      <dt>
+        <label
+          for="categories"
+        >
+           Categories 
+        </label>
+      </dt>
+      <dd>
+        <select
+          class="ng-untouched ng-pristine ng-valid"
+          formcontrolname="categories"
+          id="categories"
+          multiple=""
+          ng-reflect-name="categories"
+        >
+          
+        </select>
+        <div>
+          <small>
+            Use Ctrl + left mouse button to select multiple items or unselect all.
+          </small>
+        </div>
+      </dd>
+    </div>
+    <button
+      class="btn btn-primary"
+      type="submit"
+    >
+      Save
+    </button>
+  </form>
+</app-companies-create-edit>
+`;

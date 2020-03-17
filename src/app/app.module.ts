@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ApiInterceptor } from './api.interceptor';
 import { CompaniesService } from './services/companies.service';
 import { CategoriesService } from './services/categories.service';
 import { ViewsService } from './services/views.service';
@@ -13,6 +14,7 @@ import { CategoriesCreateEditComponent } from './components/categories/categorie
 import { CompaniesListComponent } from './components/companies/companies-list/companies-list.component';
 import { CompaniesCreateEditComponent } from './components/companies/companies-create-edit/companies-create-edit.component';
 import { HomeComponent } from './components/home/home.component';
+import { CompanyComponent } from './components/companies/company/company.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { HomeComponent } from './components/home/home.component';
     CategoriesListComponent,
     CategoriesCreateEditComponent,
     CompaniesListComponent,
-    CompaniesCreateEditComponent
+    CompaniesCreateEditComponent,
+    CompanyComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,12 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [CategoriesService, CompaniesService, ViewsService],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },
+    CategoriesService,
+    CompaniesService,
+    ViewsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
