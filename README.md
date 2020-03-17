@@ -3,9 +3,9 @@
 ## Introduction
 Simple Angular 8 WebApp implements CRUD on two models: companies and categories and list companies filtered by categoryId on the home view.
 
-The app was deployed on (https://angular-jest-100.herokuapp.com/)[https://angular-jest-100.herokuapp.com/]
+The app was deployed on [https://angular-jest-100.herokuapp.com/](https://angular-jest-100.herokuapp.com/)
 
-Backend for it was implemented in [Express-REST](https://github.com/DariuszWietecha/express-rest) and deployed on (https://express-rest-100.herokuapp.com/)[https://express-rest-100.herokuapp.com/].
+Backend for it was implemented in [Express-REST](https://github.com/DariuszWietecha/express-rest) and deployed on [https://express-rest-100.herokuapp.com/](https://express-rest-100.herokuapp.com/).
 
 ## Implementation details
 Main used dependencies:
