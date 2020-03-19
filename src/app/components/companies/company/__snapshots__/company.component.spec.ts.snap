@@ -15,12 +15,6 @@ exports[`CompanyComponent snapShot 1`] = `
       Great Company
     </h4>
     <dt>
-      Name:
-    </dt>
-    <dd>
-      Great Company
-    </dd>
-    <dt>
       Logo:
     </dt>
     <dd>

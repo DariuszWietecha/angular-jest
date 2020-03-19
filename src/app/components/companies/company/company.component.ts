@@ -8,7 +8,7 @@ import { ICompany } from '../../../services/companies.service';
 })
 
 export class CompanyComponent {
-  @HostBinding('class') className = 'card col-4';
+  @HostBinding('class') className = 'card-body';
   @Input() company: ICompany;
   @Input() showEditButton = true;
   constructor() { }

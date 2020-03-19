@@ -2,7 +2,9 @@
 
 exports[`HomeComponent snapShot 1`] = `
 <app-home
+  categories={[Function Array]}
   categoryId="null"
+  companies={[Function Array]}
   route={[Function ActivatedRoute]}
   viewsService={[Function ViewsService]}
 >
@@ -28,19 +30,138 @@ exports[`HomeComponent snapShot 1`] = `
           All
         </a>
         
+        <a
+          class="list-group-item list-group-item-action"
+          href="/views/a0308830-660b-11ea-9266-adf5decb4537"
+          ng-reflect-klass="list-group-item list-group-ite"
+          ng-reflect-ng-class="[object Object]"
+          ng-reflect-router-link="/views,a0308830-660b-11ea-9266"
+        >
+          Big Category
+        </a>
+        <a
+          class="list-group-item list-group-item-action"
+          href="/views/eae597d0-660b-11ea-9266-adf5decb4537"
+          ng-reflect-klass="list-group-item list-group-ite"
+          ng-reflect-ng-class="[object Object]"
+          ng-reflect-router-link="/views,eae597d0-660b-11ea-9266"
+        >
+          Small Category
+        </a>
       </ul>
     </div>
     <div
       class="col-9"
     >
-      <h4>
-        Companies
-      </h4>
-      <div
-        class="d-flex flex-wrap"
+      <app-list
+        ng-reflect-items="[object Object],[object Object"
+        ng-reflect-show-create-button="false"
+        ng-reflect-title="Companies"
       >
         
-      </div>
+        <h4>
+          Companies
+        </h4>
+        <div
+          class="d-flex flex-wrap"
+        >
+          
+          <div
+            class="card col-4"
+          >
+            <template
+              ng-reflect-ng-template-outlet="[object Object]"
+              ng-reflect-ng-template-outlet-context="[object Object]"
+            />
+            <app-company
+              class="card-body"
+              ng-reflect-company="[object Object]"
+              ng-reflect-show-edit-button="false"
+            >
+              <div
+                class="card-body"
+              >
+                <h4
+                  class="card-title"
+                >
+                  Great Company
+                </h4>
+                <dt>
+                  Logo:
+                </dt>
+                <dd>
+                  Great cube
+                </dd>
+                <dt>
+                  E-mail:
+                </dt>
+                <dd>
+                  mail@greatcompany.com
+                </dd>
+                <dt>
+                  Categories:
+                </dt>
+                <dd>
+                  <ul>
+                    
+                    <li>
+                      Big Category
+                    </li>
+                  </ul>
+                </dd>
+                
+              </div>
+            </app-company>
+          </div>
+          <div
+            class="card col-4"
+          >
+            <template
+              ng-reflect-ng-template-outlet="[object Object]"
+              ng-reflect-ng-template-outlet-context="[object Object]"
+            />
+            <app-company
+              class="card-body"
+              ng-reflect-company="[object Object]"
+              ng-reflect-show-edit-button="false"
+            >
+              <div
+                class="card-body"
+              >
+                <h4
+                  class="card-title"
+                >
+                  Small Company
+                </h4>
+                <dt>
+                  Logo:
+                </dt>
+                <dd>
+                  Small ball
+                </dd>
+                <dt>
+                  E-mail:
+                </dt>
+                <dd>
+                  mail@smallcompany.com
+                </dd>
+                <dt>
+                  Categories:
+                </dt>
+                <dd>
+                  <ul>
+                    
+                    <li>
+                      Quite big company
+                    </li>
+                  </ul>
+                </dd>
+                
+              </div>
+            </app-company>
+          </div>
+        </div>
+      </app-list>
     </div>
   </div>
 </app-home>

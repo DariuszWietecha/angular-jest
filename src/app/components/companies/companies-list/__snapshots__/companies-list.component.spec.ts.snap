@@ -5,124 +5,139 @@ exports[`CompaniesListComponent snapShot 1`] = `
   companies={[Function Array]}
   companiesService={[Function CompaniesService]}
 >
-  <div
-    class="text-right"
-  >
-    <a
-      class="btn btn-primary"
-      href="/companies/create"
-      ng-reflect-router-link="/companies/create/"
-    >
-      Create
-    </a>
-  </div><h4>
-    Companies
-  </h4><div
-    class="d-flex flex-wrap"
+  <app-list
+    ng-reflect-create-endpoint="companies"
+    ng-reflect-items="[object Object],[object Object"
+    ng-reflect-title="Companies"
   >
     
-    <app-company
-      class="card col-4"
-      ng-reflect-company="[object Object]"
+    <div
+      class="text-right"
     >
-      <div
-        class="card-body"
+      <a
+        class="btn btn-primary"
+        href="/companies/create"
+        ng-reflect-router-link="/,companies,create"
       >
-        <h4
-          class="card-title"
-        >
-          Great Company
-        </h4>
-        <dt>
-          Name:
-        </dt>
-        <dd>
-          Great Company
-        </dd>
-        <dt>
-          Logo:
-        </dt>
-        <dd>
-          Great cube
-        </dd>
-        <dt>
-          E-mail:
-        </dt>
-        <dd>
-          mail@greatcompany.com
-        </dd>
-        <dt>
-          Categories:
-        </dt>
-        <dd>
-          <ul>
-            
-            <li>
-              Big Category
-            </li>
-          </ul>
-        </dd>
-        
-        <a
-          class="btn btn-primary"
-          href="/companies/edit/f0a6d4b0-6591-11ea-a253-fd7829c2ab13"
-          ng-reflect-router-link="/companies/edit,f0a6d4b0-6591-"
-        >
-          Edit
-        </a>
-      </div>
-    </app-company>
-    <app-company
-      class="card col-4"
-      ng-reflect-company="[object Object]"
+        Create
+      </a>
+    </div>
+    <h4>
+      Companies
+    </h4>
+    <div
+      class="d-flex flex-wrap"
     >
+      
       <div
-        class="card-body"
+        class="card col-4"
       >
-        <h4
-          class="card-title"
+        <template
+          ng-reflect-ng-template-outlet="[object Object]"
+          ng-reflect-ng-template-outlet-context="[object Object]"
+        />
+        <app-company
+          class="card-body"
+          ng-reflect-company="[object Object]"
+          ng-reflect-show-edit-button="true"
         >
-          Small Company
-        </h4>
-        <dt>
-          Name:
-        </dt>
-        <dd>
-          Small Company
-        </dd>
-        <dt>
-          Logo:
-        </dt>
-        <dd>
-          Small ball
-        </dd>
-        <dt>
-          E-mail:
-        </dt>
-        <dd>
-          mail@smallcompany.com
-        </dd>
-        <dt>
-          Categories:
-        </dt>
-        <dd>
-          <ul>
+          <div
+            class="card-body"
+          >
+            <h4
+              class="card-title"
+            >
+              Great Company
+            </h4>
+            <dt>
+              Logo:
+            </dt>
+            <dd>
+              Great cube
+            </dd>
+            <dt>
+              E-mail:
+            </dt>
+            <dd>
+              mail@greatcompany.com
+            </dd>
+            <dt>
+              Categories:
+            </dt>
+            <dd>
+              <ul>
+                
+                <li>
+                  Big Category
+                </li>
+              </ul>
+            </dd>
             
-            <li>
-              Quite big company
-            </li>
-          </ul>
-        </dd>
-        
-        <a
-          class="btn btn-primary"
-          href="/companies/edit/f0a6d4b0-6591-11ea-a253-fd7829c2aaaa"
-          ng-reflect-router-link="/companies/edit,f0a6d4b0-6591-"
-        >
-          Edit
-        </a>
+            <a
+              class="btn btn-primary"
+              href="/companies/edit/f0a6d4b0-6591-11ea-a253-fd7829c2ab13"
+              ng-reflect-router-link="/companies/edit,f0a6d4b0-6591-"
+            >
+              Edit
+            </a>
+          </div>
+        </app-company>
       </div>
-    </app-company>
-  </div>
+      <div
+        class="card col-4"
+      >
+        <template
+          ng-reflect-ng-template-outlet="[object Object]"
+          ng-reflect-ng-template-outlet-context="[object Object]"
+        />
+        <app-company
+          class="card-body"
+          ng-reflect-company="[object Object]"
+          ng-reflect-show-edit-button="true"
+        >
+          <div
+            class="card-body"
+          >
+            <h4
+              class="card-title"
+            >
+              Small Company
+            </h4>
+            <dt>
+              Logo:
+            </dt>
+            <dd>
+              Small ball
+            </dd>
+            <dt>
+              E-mail:
+            </dt>
+            <dd>
+              mail@smallcompany.com
+            </dd>
+            <dt>
+              Categories:
+            </dt>
+            <dd>
+              <ul>
+                
+                <li>
+                  Quite big company
+                </li>
+              </ul>
+            </dd>
+            
+            <a
+              class="btn btn-primary"
+              href="/companies/edit/f0a6d4b0-6591-11ea-a253-fd7829c2aaaa"
+              ng-reflect-router-link="/companies/edit,f0a6d4b0-6591-"
+            >
+              Edit
+            </a>
+          </div>
+        </app-company>
+      </div>
+    </div>
+  </app-list>
 </app-companies-list>
 `;

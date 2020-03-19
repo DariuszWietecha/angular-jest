@@ -1,8 +1,5 @@
-<div class="text-right">
-	<a [routerLink]="['/companies/create/']" class="btn btn-primary">Create</a>
-</div>
-
-<h4>Companies</h4>
-<div class="d-flex flex-wrap">
-	<app-company *ngFor="let company of companies" [company]="company"></app-company>
-</div>
+<app-list [items]="companies" [createEndpoint]="'companies'" [title]="'Companies'">
+	<ng-template let-item="item">
+			<app-company [company]="item" [showEditButton]="true"></app-company>
+	</ng-template> 
+</app-list>

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListComponent snapShot 1`] = `
+<app-list
+  createEndpoint=""
+  items={[Function Array]}
+  showCreateButton={[Function Boolean]}
+  templateVariable="undefined"
+>
+  <div
+    class="text-right"
+  >
+    <a
+      class="btn btn-primary"
+      href="//create"
+      ng-reflect-router-link="/,,create"
+    >
+      Create
+    </a>
+  </div><h4>
+    
+  </h4><div
+    class="d-flex flex-wrap"
+  >
+    
+    <div
+      class="card col-4"
+    >
+      <template
+        ng-reflect-ng-template-outlet-context="[object Object]"
+      />
+    </div>
+    <div
+      class="card col-4"
+    >
+      <template
+        ng-reflect-ng-template-outlet-context="[object Object]"
+      />
+    </div>
+  </div>
+</app-list>
+`;

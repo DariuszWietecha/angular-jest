@@ -5,62 +5,79 @@ exports[`CategoriesListComponent snapShot 1`] = `
   categories={[Function Array]}
   categoriesService={[Function CategoriesService]}
 >
-  <div
-    class="text-right"
-  >
-    <a
-      class="btn btn-primary"
-      href="/categories/create"
-      ng-reflect-router-link="/categories/create/"
-    >
-      Create
-    </a>
-  </div><h2>
-    Categories
-  </h2><div
-    class="d-flex flex-wrap"
+  <app-list
+    ng-reflect-create-endpoint="categories"
+    ng-reflect-items="[object Object],[object Object"
+    ng-reflect-title="Categories"
   >
     
     <div
-      class="card col-4"
+      class="text-right"
     >
-      <div
-        class="card-body"
+      <a
+        class="btn btn-primary"
+        href="/categories/create"
+        ng-reflect-router-link="/,categories,create"
       >
-        <h4
-          class="card-title"
-        >
-          Big Category
-        </h4>
-        <a
-          class="btn btn-primary"
-          href="/categories/edit/a0308830-660b-11ea-9266-adf5decb4537"
-          ng-reflect-router-link="/categories/edit,a0308830-660b"
-        >
-          Edit
-        </a>
-      </div>
+        Create
+      </a>
     </div>
+    <h4>
+      Categories
+    </h4>
     <div
-      class="card col-4"
+      class="d-flex flex-wrap"
     >
+      
       <div
-        class="card-body"
+        class="card col-4"
       >
-        <h4
-          class="card-title"
+        <template
+          ng-reflect-ng-template-outlet="[object Object]"
+          ng-reflect-ng-template-outlet-context="[object Object]"
+        />
+        <div
+          class="card-body"
         >
-          Small Category
-        </h4>
-        <a
-          class="btn btn-primary"
-          href="/categories/edit/eae597d0-660b-11ea-9266-adf5decb4537"
-          ng-reflect-router-link="/categories/edit,eae597d0-660b"
+          <h4
+            class="card-title"
+          >
+            Big Category
+          </h4>
+          <a
+            class="btn btn-primary"
+            href="/categories/edit/a0308830-660b-11ea-9266-adf5decb4537"
+            ng-reflect-router-link="/categories/edit,a0308830-660b"
+          >
+            Edit
+          </a>
+        </div>
+      </div>
+      <div
+        class="card col-4"
+      >
+        <template
+          ng-reflect-ng-template-outlet="[object Object]"
+          ng-reflect-ng-template-outlet-context="[object Object]"
+        />
+        <div
+          class="card-body"
         >
-          Edit
-        </a>
+          <h4
+            class="card-title"
+          >
+            Small Category
+          </h4>
+          <a
+            class="btn btn-primary"
+            href="/categories/edit/eae597d0-660b-11ea-9266-adf5decb4537"
+            ng-reflect-router-link="/categories/edit,eae597d0-660b"
+          >
+            Edit
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+  </app-list>
 </app-categories-list>
 `;

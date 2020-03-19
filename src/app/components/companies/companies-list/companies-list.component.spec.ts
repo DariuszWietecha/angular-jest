@@ -1,9 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CompaniesService } from '../../../services/companies.service';
+
 import { CompaniesListComponent } from './companies-list.component';
 import { CompanyComponent } from '../company/company.component';
-import { HttpClientModule } from '@angular/common/http';
+import { ListComponent } from '../../list/list.component';
 
 describe('CompaniesListComponent', () => {
   let component: CompaniesListComponent;
@@ -12,8 +14,8 @@ describe('CompaniesListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      declarations: [CompanyComponent, CompaniesListComponent, ListComponent],
       imports: [HttpClientModule, RouterTestingModule],
-      declarations: [CompanyComponent, CompaniesListComponent],
       providers: [CompaniesService],
     })
       .compileComponents();

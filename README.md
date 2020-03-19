@@ -18,12 +18,18 @@ Main used dependencies:
 During the implemented was used node v10.16.3.
 
 ## Runing the app
+### Runing as NodeJS service
 1. Install dependencies and build using `npm install`.
 2. To change the port to different than 8080: copy `example.env` as `.env` and update PORT variable value as required.
 3. Define API URL in `id` attribute of `apibase` tag in `src\index.html` file(`<apibase id="https://express-rest-100.herokuapp.com/">`).
 4. Run app using `npm start`.
-5. App will be compiled and available on [http://localhost:8080](http://localhost:8080)(If port wasn't changed by `.env`).
-6. To build WebApp use `npm run build`.
+5. App will be available on [http://localhost:8080](http://localhost:8080)(If port wasn't changed by `.env`).
+
+### Runing the app in the development mode
+1. Install dependencies and build using `npm install`.
+2. Define API URL in `id` attribute of `apibase` tag in `src\index.html` file(`<apibase id="https://express-rest-100.herokuapp.com/">`).
+3. Serve app by `npm run serve`
+4. App will be available on [http://localhost:4200](http://localhost:4200).
 
 ## Unit tests
 #### Unit tests include:
@@ -34,11 +40,12 @@ During the implemented was used node v10.16.3.
 
 #### Runing unit tests:
 1. Install dependencies and build using `npm install`.
-1. Run unit tests by `npm test`.
-2. To check test coverage run `npm test -- --coverage --watchAll`.
+2. Run unit tests by `npm test`.
+3. To check test coverage run `npm test -- --coverage --watchAll`.
+4. To run single spec run `jest categories-list.component.spec.ts`. Adding `only` to particular it will let to run one test e.g. `it.only('should create'...`
 
 ## Notes
 * .vscode directory was committed to the repository to let to debug app - launch Chrome against localhost, with sourcemaps. Steps:
-1. Serve app by `npm run serve`
-2. Run "Launch Chrome against localhost, with sourcemaps" debugger task.
+1. Runing the app in the development mode
+2. Run `Launch Chrome against localhost, with sourcemaps` debugger task.
 3. App will be opened in new Chrome window on [http://localhost:4200](http://localhost:4200) with active breakpoints defined in VSCode.

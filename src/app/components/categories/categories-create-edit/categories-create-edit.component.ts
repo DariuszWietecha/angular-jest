@@ -49,7 +49,7 @@ export class CategoriesCreateEditComponent implements OnInit {
       .subscribe(() => {
         this.router.navigate(['/categories']);
       });
-// TODO: associating company with category
+
     this.createEditForm.reset();
   }
 }

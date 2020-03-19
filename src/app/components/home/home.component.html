@@ -10,8 +10,12 @@
 		</ul>
 	</div>
 	<div class="col-9">
-		<h4>Companies</h4>
-		<div class="d-flex flex-wrap">
-			<app-company *ngFor="let company of companies" [company]="company" [showEditButton]="false"></app-company>
-		</div>
+		<app-list
+			[items]="companies"
+			[showCreateButton]="false"
+			[title]="'Companies'">
+				<ng-template let-item="item">
+						<app-company [company]="item" [showEditButton]="false"></app-company>
+				</ng-template> 
+		</app-list>
 	</div>

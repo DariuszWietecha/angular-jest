@@ -2,7 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CategoriesService } from '../../../services/categories.service';
+
 import { CategoriesListComponent } from './categories-list.component';
+import { ListComponent } from '../../list/list.component';
 
 describe('CategoriesListComponent', () => {
   let component: CategoriesListComponent;
@@ -11,8 +13,8 @@ describe('CategoriesListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      declarations: [CategoriesListComponent, ListComponent],
       imports: [HttpClientModule, RouterTestingModule],
-      declarations: [CategoriesListComponent],
       providers: [CategoriesService],
     })
       .compileComponents();

@@ -15,6 +15,7 @@ import { CompaniesListComponent } from './components/companies/companies-list/co
 import { CompaniesCreateEditComponent } from './components/companies/companies-create-edit/companies-create-edit.component';
 import { HomeComponent } from './components/home/home.component';
 import { CompanyComponent } from './components/companies/company/company.component';
+import { ListComponent } from './components/list/list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CompanyComponent } from './components/companies/company/company.compone
     CategoriesCreateEditComponent,
     CompaniesListComponent,
     CompaniesCreateEditComponent,
-    CompanyComponent
+    CompanyComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

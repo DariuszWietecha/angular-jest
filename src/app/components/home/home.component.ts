@@ -10,8 +10,8 @@ import { ICategory } from '../../services/categories.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  companies: ICompany[];
   categories: ICategory[];
+  companies: ICompany[];
   categoryId;
 
   constructor(
