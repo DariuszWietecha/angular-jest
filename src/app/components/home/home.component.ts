@@ -1,33 +1,29 @@
 import { ActivatedRoute } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
-import { ViewsService } from '../../services/views.service';
-import { ICompany } from '../../services/companies.service';
-import { ICategory } from '../../services/categories.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable, Subscription } from 'rxjs';
+import { IStore, selectHomeData } from '../../reducers';
+import { loadHomeData } from '../../actions/views.actions';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-  categories: ICategory[];
-  companies: ICompany[];
-  categoryId;
+export class HomeComponent implements OnInit, OnDestroy {
+  homeData$: Observable<IStore> = this.store.select(selectHomeData);
+  routeSub = new Subscription();
 
   constructor(
     private route: ActivatedRoute,
-    private viewsService: ViewsService) { }
+    private store: Store<IStore>
+  ) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.categoryId = params.get('categoryId');
-
-      this.viewsService.get(this.categoryId)
-        .subscribe((data) => {
-          this.companies = data.companies;
-          this.categories = data.categories;
-          this.categoryId = data.categoryId;
-        });
+    this.routeSub = this.route.paramMap.subscribe(params => {
+      this.store.dispatch(loadHomeData({ categoryId: params.get('categoryId') }));
     });
   }
+
+  ngOnDestroy() { this.routeSub.unsubscribe(); }
 }

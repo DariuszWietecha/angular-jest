@@ -1,22 +1,24 @@
-import { Component, OnInit} from '@angular/core';
-import { CompaniesService, ICompany } from '../../../services/companies.service';
-import { Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ICompany } from '../../../services/companies.service';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { IStore, selectCompaniesData } from '../../../reducers';
+import { loadCompanies } from '../../../actions/companies.actions';
 
 @Component({
   selector: 'app-companies-list',
   templateUrl: './companies-list.component.html',
   styleUrls: ['./companies-list.component.scss']
 })
-export class CompaniesListComponent implements OnInit  {
-  @Input() companies: ICompany[];
+export class CompaniesListComponent implements OnInit {
+  companies$: Observable<ICompany[]> = this.store.select(selectCompaniesData);
 
-  constructor(private companiesService: CompaniesService) { }
+  constructor(
+    private store: Store<IStore>
+  ) { }
 
   ngOnInit() {
-    this.companiesService.list()
-      .subscribe((data) => {
-        this.companies = data;
-      });
-}
+    this.store.dispatch(loadCompanies());
+  }
 
 }

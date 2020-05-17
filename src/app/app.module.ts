@@ -16,6 +16,14 @@ import { CompaniesCreateEditComponent } from './components/companies/companies-c
 import { HomeComponent } from './components/home/home.component';
 import { CompanyComponent } from './components/companies/company/company.component';
 import { ListComponent } from './components/list/list.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { ViewsEffects } from './effects/views.effects';
+import { CompaniesEffects } from './effects/companies.effects';
+import { CategoriesEffects } from './effects/categories.effects';
 
 @NgModule({
   declarations: [
@@ -33,6 +41,17 @@ import { ListComponent } from './components/list/list.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    StoreModule.forRoot(reducers,
+      {
+        metaReducers,
+        runtimeChecks: {
+          strictStateImmutability: true,
+          strictActionImmutability: true,
+        }
+      }
+    ),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    EffectsModule.forRoot([ViewsEffects, CompaniesEffects, CategoriesEffects]),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },

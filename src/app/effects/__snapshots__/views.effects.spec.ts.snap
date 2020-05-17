@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewsEffects loadHomeDataFailure 1`] = `
+Actions {
+  "_isScalar": false,
+  "operator": MergeMapOperator {
+    "concurrent": Infinity,
+    "project": [Function],
+  },
+  "source": Actions {
+    "_isScalar": false,
+    "operator": FilterOperator {
+      "predicate": [Function],
+      "thisArg": undefined,
+    },
+    "source": TestActions {
+      "_isScalar": false,
+      "source": TestHotObservable {
+        "_isScalar": false,
+        "error": undefined,
+        "marbles": "-a",
+        "source": SubscriptionLoggable {
+          "_isScalar": false,
+          "closed": false,
+          "hasError": false,
+          "isStopped": false,
+          "messages": Array [
+            Object {
+              "frame": 10,
+              "notification": Notification {
+                "error": undefined,
+                "hasValue": true,
+                "kind": "N",
+                "value": Object {
+                  "categoryId": "123",
+                  "type": "[Home] Load Home data",
+                },
+              },
+            },
+          ],
+          "observers": Array [],
+          "scheduler": TestScheduler {
+            "SchedulerAction": [Function],
+            "actions": Array [],
+            "active": false,
+            "assertDeepEqual": [Function],
+            "coldObservables": Array [
+              SubscriptionLoggable {
+                "_isScalar": false,
+                "_subscribe": [Function],
+                "messages": Array [
+                  Object {
+                    "frame": 0,
+                    "notification": Notification {
+                      "error": "error",
+                      "hasValue": false,
+                      "kind": "E",
+                      "value": undefined,
+                    },
+                  },
+                ],
+                "scheduler": [Circular],
+                "subscriptions": Array [],
+              },
+              SubscriptionLoggable {
+                "_isScalar": false,
+                "_subscribe": [Function],
+                "messages": Array [
+                  Object {
+                    "frame": 10,
+                    "notification": Notification {
+                      "error": undefined,
+                      "hasValue": true,
+                      "kind": "N",
+                      "value": Object {
+                        "error": "Error",
+                        "type": "[Views] Load Home data Failure",
+                      },
+                    },
+                  },
+                ],
+                "scheduler": [Circular],
+                "subscriptions": Array [],
+              },
+            ],
+            "flushTests": Array [],
+            "frame": 0,
+            "hotObservables": Array [
+              [Circular],
+            ],
+            "index": -1,
+            "maxFrames": 750,
+            "now": [Function],
+            "runMode": false,
+            "scheduled": undefined,
+          },
+          "subscriptions": Array [],
+          "thrownError": null,
+        },
+        "values": Object {
+          "a": Object {
+            "categoryId": "123",
+            "type": "[Home] Load Home data",
+          },
+        },
+      },
+    },
+  },
+}
+`;

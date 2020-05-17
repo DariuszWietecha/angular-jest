@@ -27,13 +27,13 @@ During the implemented was used node v10.16.3.
 
 ### Runing the app in the development mode
 1. Install dependencies and build using `npm install`.
-2. Define API URL in `id` attribute of `apibase` tag in `src\index.html` file(`<apibase id="https://express-rest-100.herokuapp.com/">`).
+2. Define API URL in `id` attribute of `apibase` tag in `src\index.html` file(`<apibase id="https://express-rest-100.herokuapp.com">`).
 3. Serve app by `npm run serve`
 4. App will be available on [http://localhost:4200](http://localhost:4200).
 
 ## Unit tests
 #### Unit tests include:
-1.  Exemplary standard tests checking content or formatting of elements(src\app\components\app\app.component.spec.ts)
+1. Exemplary standard tests checking content or formatting of elements(src\app\components\app\app.component.spec.ts)
 2. Checking instantiating components (all components)
 3. Jest Snapshots (all components)
 100% unit tests coverage wasn't the target of this project.
@@ -46,6 +46,6 @@ During the implemented was used node v10.16.3.
 
 ## Notes
 * .vscode directory was committed to the repository to let to debug app - launch Chrome against localhost, with sourcemaps. Steps:
-1. Runing the app in the development mode
+1. Run the app in the development mode
 2. Run `Launch Chrome against localhost, with sourcemaps` debugger task.
 3. App will be opened in new Chrome window on [http://localhost:4200](http://localhost:4200) with active breakpoints defined in VSCode.

@@ -1,21 +1,19 @@
-<div class="row">
+<div class="row" *ngIf="homeData$ | async as homeData">
 	<div class="col-3">
 		<h4>Categories</h4>
 		<ul class="list-group">
 			<a [routerLink]="['']" class="list-group-item list-group-item-action"
-				[ngClass]="{active: categoryId == null}">All</a>
-			<a *ngFor="let category of categories" [routerLink]="['/views', category.id]"
+				[ngClass]="{active: homeData.categoryId == null}">All</a>
+			<a *ngFor="let category of homeData.categories" [routerLink]="['/views', category.id]"
 				class="list-group-item list-group-item-action"
-				[ngClass]="{active: category.id === categoryId}">{{ category.name }}</a>
+				[ngClass]="{active: category.id === homeData.categoryId}">{{ category.name }}</a>
 		</ul>
 	</div>
 	<div class="col-9">
-		<app-list
-			[items]="companies"
-			[showCreateButton]="false"
-			[title]="'Companies'">
-				<ng-template let-item="item">
-						<app-company [company]="item" [showEditButton]="false"></app-company>
-				</ng-template> 
+		<app-list [items]="homeData.companies" [showCreateButton]="false" [title]="'Companies'">
+			<ng-template let-item="item">
+				<app-company [company]="item" [showEditButton]="false"></app-company>
+			</ng-template>
 		</app-list>
 	</div>
+</div>

@@ -1,8 +1,10 @@
-<app-list [items]="categories" [createEndpoint]="'categories'" [title]="'Categories'">
-	<ng-template let-item="item">
-    <div class="card-body">
-      <h4 class="card-title">{{ item.name }}</h4>
-      <a [routerLink]="['/categories/edit', item.id]"  class="btn btn-primary">Edit</a>
-    </div>
-	</ng-template> 
-</app-list>
+<div *ngIf="categories$ | async as categories">
+  <app-list [items]="categories" [createEndpoint]="'categories'" [title]="'Categories'">
+    <ng-template let-item="item">
+      <div class="card-body">
+        <h4 class="card-title">{{ item.name }}</h4>
+        <a [routerLink]="['/categories/edit', item.id]" class="btn btn-primary">Edit</a>
+      </div>
+    </ng-template>
+  </app-list>
+</div>

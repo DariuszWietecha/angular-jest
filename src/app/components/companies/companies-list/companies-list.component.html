@@ -1,5 +1,7 @@
-<app-list [items]="companies" [createEndpoint]="'companies'" [title]="'Companies'">
-	<ng-template let-item="item">
+<div *ngIf="companies$ | async as companies">
+	<app-list [items]="companies" [createEndpoint]="'companies'" [title]="'Companies'">
+		<ng-template let-item="item">
 			<app-company [company]="item" [showEditButton]="true"></app-company>
-	</ng-template> 
-</app-list>
+		</ng-template>
+	</app-list>
+</div>

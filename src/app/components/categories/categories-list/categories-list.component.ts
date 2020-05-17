@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {CategoriesService, ICategory} from '../../../services/categories.service';
+import { ICategory } from '../../../services/categories.service';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { IStore, selectCategoriesData } from '../../../reducers';
+import { loadCompanies } from '../../../actions/companies.actions';
+import { loadCategories } from 'src/app/actions/categories.actions';
 
 @Component({
   selector: 'app-categories-list',
@@ -7,14 +12,13 @@ import {CategoriesService, ICategory} from '../../../services/categories.service
   styleUrls: ['./categories-list.component.scss']
 })
 export class CategoriesListComponent implements OnInit {
-  categories: ICategory[];
-  constructor(private categoriesService: CategoriesService) { }
+  categories$: Observable<ICategory[]> = this.store.select(selectCategoriesData);
+  constructor(
+    private store: Store<IStore>
+  ) { }
 
   ngOnInit() {
-    this.categoriesService.list()
-    .subscribe( (data) => {
-      this.categories = data;
-    });
+    this.store.dispatch(loadCategories());
   }
 
 }

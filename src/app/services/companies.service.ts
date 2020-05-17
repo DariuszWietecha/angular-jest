@@ -17,7 +17,7 @@ export interface ICompany extends ICompanyInput {
 export class CompaniesService {
 
   constructor(private http: HttpClient) { }
-  endpoint = 'companies/';
+  endpoint = '/companies/';
 
   get(id: string): Observable<ICompany> {
     return this.http.get<ICompany>(this.endpoint + id);

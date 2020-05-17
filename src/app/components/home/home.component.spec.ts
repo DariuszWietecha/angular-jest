@@ -10,8 +10,8 @@ import { ListComponent } from '../list/list.component';
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
-  const categoriesListMock = require('../../../../test/data/categories/categories-get.json');
-  const comapaniesListMock = require('../../../../test/data/companies/companies-get.json');
+  const categoriesListMock = require('../../../test/data/categories/categories-get.json');
+  const comapaniesListMock = require('../../../test/data/companies/companies-get.json');
   const categoryId = 'a0308830-660b-11ea-9266-adf5decb4537';
 
   beforeEach(async(() => {

@@ -14,7 +14,7 @@ export interface ICategory extends ICategoryInput {
 export class CategoriesService {
 
   constructor(private http: HttpClient) { }
-  endpoint = 'categories/';
+  endpoint = '/categories/';
 
   get(id: string): Observable<ICategory> {
     return this.http.get<ICategory>(this.endpoint + id);
@@ -24,11 +24,11 @@ export class CategoriesService {
     return this.http.get<ICategory[]>(this.endpoint);
   }
 
-  create(company: ICategory): Observable<ICategory> {
-    return this.http.post<ICategory>(this.endpoint, company);
+  create(category: ICategory): Observable<ICategory> {
+    return this.http.post<ICategory>(this.endpoint, category);
   }
 
-  edit(company: ICategory): Observable<ICategory> {
-    return this.http.put<ICategory>(this.endpoint, company);
+  edit(category: ICategory): Observable<ICategory> {
+    return this.http.put<ICategory>(this.endpoint, category);
   }
 }
